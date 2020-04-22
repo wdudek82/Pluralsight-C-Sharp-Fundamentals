@@ -1,9 +1,0 @@
-/home/neevor/Storage/code/RiderProjects/gradebook/src/GradeBook/bin/Debug/netcoreapp3.1/GradeBook
-/home/neevor/Storage/code/RiderProjects/gradebook/src/GradeBook/bin/Debug/netcoreapp3.1/GradeBook.dll
-/home/neevor/Storage/code/RiderProjects/gradebook/src/GradeBook/bin/Debug/netcoreapp3.1/GradeBook.pdb
-/home/neevor/Storage/code/RiderProjects/gradebook/src/GradeBook/obj/Debug/netcoreapp3.1/GradeBook.csprojAssemblyReference.cache
-/home/neevor/Storage/code/RiderProjects/gradebook/src/GradeBook/obj/Debug/netcoreapp3.1/GradeBook.csproj.CoreCompileInputs.cache
-/home/neevor/Storage/code/RiderProjects/gradebook/src/GradeBook/obj/Debug/netcoreapp3.1/GradeBook.AssemblyInfoInputs.cache
-/home/neevor/Storage/code/RiderProjects/gradebook/src/GradeBook/obj/Debug/netcoreapp3.1/GradeBook.AssemblyInfo.cs
-/home/neevor/Storage/code/RiderProjects/gradebook/src/GradeBook/obj/Debug/netcoreapp3.1/GradeBook.dll
-/home/neevor/Storage/code/RiderProjects/gradebook/src/GradeBook/obj/Debug/netcoreapp3.1/GradeBook.pdb

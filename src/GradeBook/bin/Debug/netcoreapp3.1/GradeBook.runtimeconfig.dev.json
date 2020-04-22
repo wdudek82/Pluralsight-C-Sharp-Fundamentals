@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "/home/neevor/.dotnet/store/|arch|/|tfm|",
-      "/home/neevor/.nuget/packages"
-    ]
-  }
-}
