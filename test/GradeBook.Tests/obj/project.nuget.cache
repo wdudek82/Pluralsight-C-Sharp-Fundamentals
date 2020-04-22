@@ -2,7 +2,7 @@
   "version": 2,
   "dgSpecHash": "/RmtNskCaTxaZjJ76LFCf+1VrSWJN1evK69LPxmAQuu2/5+UMLbpti5qj44Jq/t1XtfgwUmGASqhdxe3jjooSQ==",
   "success": true,
-  "projectFilePath": "/home/neevor/Storage/code/RiderProjects/gradebook/test/GradeBook.Tests/GradeBook.Tests.csproj",
+  "projectFilePath": "/home/neevor/code/RiderProjects/gradebook/test/GradeBook.Tests/GradeBook.Tests.csproj",
   "expectedPackageFiles": [
     "/home/neevor/.nuget/packages/coverlet.collector/1.2.0/coverlet.collector.1.2.0.nupkg.sha512",
     "/home/neevor/.nuget/packages/microsoft.codecoverage/16.5.0/microsoft.codecoverage.16.5.0.nupkg.sha512",

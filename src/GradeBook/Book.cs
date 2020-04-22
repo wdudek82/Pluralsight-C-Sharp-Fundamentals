@@ -7,22 +7,22 @@ namespace GradeBook
     public class Book
     {
         private List<double> grades;
-        public string name;
+        public string Name;
 
         public Book(string name)
         {
             grades = new List<double>();
-            this.name = name;
+            Name = name;
         }
 
         public Statistics GetStatistics()
         {
-            var result = new Statistics();
-            result.Average = GetMean();
-            result.High = GetHighest();
-            result.Low = GetLowest();
-
-            return result;
+            return new Statistics()
+            {
+                Average = GetMean(),
+                High = GetHighest(),
+                Low = GetLowest(),
+            };
         }
 
         public void AddGrade(double grade)

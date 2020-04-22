@@ -3508,7 +3508,7 @@
     "GradeBook/1.0.0": {
       "type": "project",
       "path": "../../src/GradeBook/GradeBook.csproj",
-      "msbuildProject": "../../src/GradeBook/GradeBook.csproj"
+      "msbuildProject": "../../../../../Storage/code/RiderProjects/gradebook/src/GradeBook/GradeBook.csproj"
     }
   },
   "projectFileDependencyGroups": {

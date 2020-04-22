@@ -7,7 +7,3 @@
 /home/neevor/Storage/code/RiderProjects/gradebook/src/GradeBook/obj/Debug/netcoreapp3.1/GradeBook.AssemblyInfo.cs
 /home/neevor/Storage/code/RiderProjects/gradebook/src/GradeBook/obj/Debug/netcoreapp3.1/GradeBook.dll
 /home/neevor/Storage/code/RiderProjects/gradebook/src/GradeBook/obj/Debug/netcoreapp3.1/GradeBook.pdb
-/home/neevor/Storage/code/RiderProjects/gradebook/src/GradeBook/bin/Debug/netcoreapp3.1/GradeBook.deps.json
-/home/neevor/Storage/code/RiderProjects/gradebook/src/GradeBook/bin/Debug/netcoreapp3.1/GradeBook.runtimeconfig.json
-/home/neevor/Storage/code/RiderProjects/gradebook/src/GradeBook/bin/Debug/netcoreapp3.1/GradeBook.runtimeconfig.dev.json
-/home/neevor/Storage/code/RiderProjects/gradebook/src/GradeBook/obj/Debug/netcoreapp3.1/GradeBook.genruntimeconfig.cache
