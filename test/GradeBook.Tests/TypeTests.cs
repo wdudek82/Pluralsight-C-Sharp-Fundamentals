@@ -81,15 +81,15 @@ namespace GradeBook.Tests
         public void StringsBehaveLikeValueType()
         {
             const string name = "Scott";
-
-            MakeUppercase(name);
+            var upper = MakeUppercase(name);
 
             Assert.Equal("Scott", name);
+            Assert.Equal("SCOTT", upper);
         }
 
-        private static void MakeUppercase(string s)
+        private static string MakeUppercase(string s)
         {
-            s.ToUpper();
+            return s.ToUpper();
         }
 
         private static void SetInt(ref int x)
