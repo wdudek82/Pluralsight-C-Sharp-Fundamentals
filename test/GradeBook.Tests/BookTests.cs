@@ -20,6 +20,7 @@ namespace GradeBook.Tests
             Assert.Equal(85.6, stats.Average, 1);
             Assert.Equal(90.5, stats.High, 1);
             Assert.Equal(77.3, stats.Low, 1);
+            Assert.Equal('B', stats.Letter);
         }
     }
 }
