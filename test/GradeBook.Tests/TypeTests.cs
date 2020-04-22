@@ -77,6 +77,21 @@ namespace GradeBook.Tests
             Assert.Equal(4, x);
         }
 
+        [Fact]
+        public void StringsBehaveLikeValueType()
+        {
+            const string name = "Scott";
+
+            MakeUppercase(name);
+
+            Assert.Equal("Scott", name);
+        }
+
+        private static void MakeUppercase(string s)
+        {
+            s.ToUpper();
+        }
+
         private static void SetInt(ref int x)
         {
             x = 4;
