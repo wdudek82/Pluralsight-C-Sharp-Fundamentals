@@ -5,60 +5,12 @@ using System.Linq;
 namespace GradeBook
 {
     public class InMemoryBook : Book
-
     {
-        private readonly List<double> _grades;
-
         public InMemoryBook(string name) : base(name)
         {
-            _grades = new List<double>();
         }
 
         public override event GradeAddedDelegate GradeAdded;
-
-        public override Statistics GetStatistics()
-        {
-            var result = new Statistics
-            {
-                Average = GetMean(),
-                High = GetHighest(),
-                Low = GetLowest()
-            };
-
-            result.Letter = result.Average switch
-            {
-                var d when d >= 90.0 => 'A',
-                var d when d >= 80.0 => 'B',
-                var d when d >= 70.0 => 'C',
-                var d when d >= 60.0 => 'D',
-                var d when d >= 50.0 => 'E',
-                _ => 'F'
-            };
-
-            // switch (result.Average)
-            // {
-            //     case var d when d >= 90.0:
-            //         result.Letter = 'A';
-            //         break;
-            //     case var d when d >= 80.0:
-            //         result.Letter = 'B';
-            //         break;
-            //     case var d when d >= 70.0:
-            //         result.Letter = 'C';
-            //         break;
-            //     case var d when d >= 60.0:
-            //         result.Letter = 'D';
-            //         break;
-            //     case var d when d >= 50.0:
-            //         result.Letter = 'E';
-            //         break;
-            //     default:
-            //         result.Letter = 'F';
-            //         break;
-            // }
-
-            return result;
-        }
 
         public void AddGrade(char grade)
         {
@@ -103,27 +55,53 @@ namespace GradeBook
             }
 
             ;
-            _grades.Add(grade);
+            Grades.Add(grade);
 
             if (GradeAdded != null) GradeAdded(this, new EventArgs());
         }
 
-        public double GetHighest()
+        public override Statistics GetStatistics()
         {
-            if (_grades.Count == 0) return 0;
-            return _grades.Max();
-        }
+            var result = new Statistics
+            {
+                Average = GetMean(),
+                High = GetHighest(),
+                Low = GetLowest()
+            };
 
-        public double GetLowest()
-        {
-            if (_grades.Count == 0) return 0;
-            return _grades.Min();
-        }
+            result.Letter = result.Average switch
+            {
+                var d when d >= 90.0 => 'A',
+                var d when d >= 80.0 => 'B',
+                var d when d >= 70.0 => 'C',
+                var d when d >= 60.0 => 'D',
+                var d when d >= 50.0 => 'E',
+                _ => 'F'
+            };
 
-        public double GetMean()
-        {
-            if (_grades.Count == 0) return 0;
-            return _grades.Sum() / _grades.Count;
+            // switch (result.Average)
+            // {
+            //     case var d when d >= 90.0:
+            //         result.Letter = 'A';
+            //         break;
+            //     case var d when d >= 80.0:
+            //         result.Letter = 'B';
+            //         break;
+            //     case var d when d >= 70.0:
+            //         result.Letter = 'C';
+            //         break;
+            //     case var d when d >= 60.0:
+            //         result.Letter = 'D';
+            //         break;
+            //     case var d when d >= 50.0:
+            //         result.Letter = 'E';
+            //         break;
+            //     default:
+            //         result.Letter = 'F';
+            //         break;
+            // }
+
+            return result;
         }
     }
 }
