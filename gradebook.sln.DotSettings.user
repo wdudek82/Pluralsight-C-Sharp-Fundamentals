@@ -1,7 +1,17 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1abb2ff6_002D4785_002D4481_002Dbbb8_002Db4baa87d44e8/@EntryIndexedValue">&lt;SessionState ContinuousTestingIsOn="False" ContinuousTestingMode="0" FrameworkVersion="{x:Null}" IsLocked="False" Name="WriteLogDelegateConPointToMethod" PlatformMonoPreference="{x:Null}" PlatformType="{x:Null}" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::E71BF141-C863-4F6E-BA84-65EA20CF12B7::.NETCoreApp,Version=v3.1::GradeBook.Tests.TypeTests.WriteLogDelegateConPointToMethod&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c7238919_002Dfec6_002D45e4_002Db64b_002D601ca1a31324/@EntryIndexedValue">&lt;SessionState ContinuousTestingIsOn="False" ContinuousTestingMode="0" FrameworkVersion="{x:Null}" IsLocked="False" Name="TypeTests" PlatformMonoPreference="{x:Null}" PlatformType="{x:Null}" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;xUnit::E71BF141-C863-4F6E-BA84-65EA20CF12B7::.NETCoreApp,Version=v3.1::GradeBook.Tests.TypeTests&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e6646033_002Ded5d_002D4f01_002Db5fc_002D4d644886fa61/@EntryIndexedValue">&lt;SessionState ContinuousTestingIsOn="False" ContinuousTestingMode="0" FrameworkVersion="{x:Null}" IsLocked="False" Name="WriteLogDelegateConPointToMethod #2" PlatformMonoPreference="{x:Null}" PlatformType="{x:Null}" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::E71BF141-C863-4F6E-BA84-65EA20CF12B7::.NETCoreApp,Version=v3.1::GradeBook.Tests.TypeTests.WriteLogDelegateConPointToMethod&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f7abb409_002D990f_002D424a_002D9f88_002D82bd9209597f/@EntryIndexedValue">&lt;SessionState ContinuousTestingIsOn="False" ContinuousTestingMode="0" FrameworkVersion="{x:Null}" IsLocked="False" Name="All tests from Solution" PlatformMonoPreference="{x:Null}" PlatformType="{x:Null}" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"&gt;

@@ -1,39 +1,53 @@
-using System.Transactions;
-using Microsoft.VisualStudio.TestPlatform.ObjectModel;
 using Xunit;
 
 namespace GradeBook.Tests
 {
+    public delegate string WriteLogDelegate(string logMessage);
+
     public class TypeTests
     {
-        [Fact]
-        public void GetBookReturnsDifferentObjects()
+        private int _count;
+
+        private string ReturnLowerMessage(string message)
         {
-            // Given
-            const string name1 = "Book 1";
-            const string name2 = "Book 2";
-            var book1 = GetBook(name1);
-            var book2 = GetBook(name2);
-
-            // When
-
-            // Then
-            Assert.Equal(name1, book1.Name);
-            Assert.Equal(name2, book2.Name);
+            _count++;
+            return message.ToLower();
         }
 
-        [Fact]
-        public void TwoVarsCanReferenceSameObject()
+        private string ReturnMessage(string message)
         {
-            // Given
-            const string name1 = "Book 1";
-            var book1 = GetBook(name1);
-            var book2 = book1;
+            _count++;
+            return message;
+        }
 
-            // When
+        private static string MakeUppercase(string s)
+        {
+            return s.ToUpper();
+        }
 
-            // Then
-            Assert.Same(book1,  book2);
+        private static void SetInt(ref int x)
+        {
+            x = 4;
+        }
+
+        private static int GetInt3()
+        {
+            return 3;
+        }
+
+        private static InMemoryBook GetBook(string name)
+        {
+            return new InMemoryBook(name);
+        }
+
+        private static void SetName(InMemoryBook inMemoryBook, string name)
+        {
+            inMemoryBook.Name = name;
+        }
+
+        private static void GetBookSetName(InMemoryBook inMemoryBook, string name)
+        {
+            inMemoryBook = new InMemoryBook(name);
         }
 
         [Fact]
@@ -43,13 +57,11 @@ namespace GradeBook.Tests
             const string name1 = "Book 1";
             const string name2 = "New Name";
             var book1 = GetBook(name1);
-            var book2 = book1;
 
             // When
             SetName(book1, name2);
 
             // Then
-            // Assert.Same(book1, book2);
             Assert.Equal(name2, book1.Name);
         }
 
@@ -69,12 +81,19 @@ namespace GradeBook.Tests
         }
 
         [Fact]
-        public void Test1()
+        public void GetBookReturnsDifferentObjects()
         {
-            var x = GetInt3();
-            SetInt(ref x);
+            // Given
+            const string name1 = "Book 1";
+            const string name2 = "Book 2";
+            var book1 = GetBook(name1);
+            var book2 = GetBook(name2);
 
-            Assert.Equal(4, x);
+            // When
+
+            // Then
+            Assert.Equal(name1, book1.Name);
+            Assert.Equal(name2, book2.Name);
         }
 
         [Fact]
@@ -87,34 +106,38 @@ namespace GradeBook.Tests
             Assert.Equal("SCOTT", upper);
         }
 
-        private static string MakeUppercase(string s)
+        [Fact]
+        public void Test1()
         {
-            return s.ToUpper();
+            var x = GetInt3();
+            SetInt(ref x);
+
+            Assert.Equal(4, x);
         }
 
-        private static void SetInt(ref int x)
+        [Fact]
+        public void TwoVarsCanReferenceSameObject()
         {
-            x = 4;
+            // Given
+            const string name1 = "Book 1";
+            var book1 = GetBook(name1);
+            var book2 = book1;
+
+            // When
+
+            // Then
+            Assert.Same(book1, book2);
         }
 
-        private static int GetInt3()
+        [Fact]
+        public void WriteLogDelegateConPointToMethod()
         {
-            return 3;
-        }
+            WriteLogDelegate log = ReturnMessage;
+            // log = new WriteLogDelegate(ReturnMessage);
+            log += ReturnMessage;
+            log += ReturnLowerMessage;
 
-        private static Book GetBook(string name)
-        {
-            return new Book(name);
-        }
-
-        private static void SetName(Book book, string name)
-        {
-            book.Name = name;
-        }
-
-        private static void GetBookSetName(Book book, string name)
-        {
-            book = new Book(name);
+            Assert.Equal(3, _count);
         }
     }
 }
